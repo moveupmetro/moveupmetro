@@ -1,1 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Leaderboard – Move-Up Metro</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body { font-family: sans-serif; padding: 2rem; background: #fefefe; }
+    h1 { color: #444; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { padding: 0.75rem; text-align: left; border-bottom: 1px solid #ccc; }
+    th { background: #f1f1f1; }
+    tr:hover { background: #f9f9f9; }
+  </style>
+</head>
+<body>
+  <h1>🏆 Move-Up Metro Leaderboard</h1>
 
+  <table>
+    <thead>
+      <tr>
+        <th>Player</th>
+        <th>Score</th>
+        <th>Badges</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for player in players %}
+      <tr>
+        <td>{{ player.name }}</td>
+        <td>{{ player.score }}</td>
+        <td>{{ player.badges | join(", ") }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <p style="margin-top:2rem;"><a href="/">⬅ Back to Game</a></p>
+</body>
+</html>
