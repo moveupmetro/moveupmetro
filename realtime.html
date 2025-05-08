@@ -1,99 +1,54 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<link rel="manifest" href="/static/manifest.json">
-<script>
-if ("serviceWorker" in navigator) { navigator.serviceWorker.register("/static/service-worker.js"); }
-</script>
-    <title>Move-Up Metro (Mobile Ready)</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
-    <script defer data-domain="yourgame.example.com" src="https://plausible.io/js/script.js"></script>
-    <style>
-        body {{
-            font-family: Arial, sans-serif;
-            padding: 1rem;
-            margin: 0;
-        }}
-        input, button {{
-            font-size: 1.2rem;
-            padding: 0.5rem;
-            margin: 0.3rem 0;
-            width: 100%;
-        }}
-        img {{
-            width: 100%;
-            max-width: 100%;
-        }}
-        #cardBox {{
-            background: #eef;
-            border: 1px solid #ccc;
-            padding: 0.5rem;
-            margin-top: 1rem;
-        }}
-        @media (min-width: 768px) {{
-            .flex {{
-                display: flex;
-                gap: 2rem;
-            }}
-            #left, #right {{
-                flex: 1;
-            }}
-        }}
-    </style>
+  <meta charset="UTF-8" />
+  <title>Move-Up Metro</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.socket.io/4.6.1/socket.io.min.js"></script>
+  <style>
+    body { font-family: sans-serif; background: #f7f7f7; margin: 0; padding: 2rem; }
+    h1 { color: #1a73e8; }
+    #chat { border: 1px solid #ccc; padding: 1rem; height: 200px; overflow-y: scroll; background: #fff; }
+    #game { margin-top: 2rem; padding: 1rem; background: #e0f7fa; border: 1px solid #17a2b8; }
+  </style>
 </head>
 <body>
-    <h1>🚇 Move-Up Metro</h1>
-    <input id="nameInput" placeholder="Your Name">
-    <button onclick="joinGame()">Join Game</button>
-    <button onclick="takeTurn()">Take Turn</button>
-    <button onclick="resetGame()">Reset</button>
+  <h1>🚇 Move-Up Metro</h1>
+  <div id="chat">
+    <strong>Chat:</strong><br />
+    <div id="messages"></div>
+  </div>
+  <form id="chat-form">
+    <input id="message" type="text" placeholder="Say something..." autocomplete="off" />
+    <button>Send</button>
+  </form>
 
-    <div class="flex">
-        <div id="left">
-            <h2>Game Board</h2>
-            <img src="/board.svg" alt="Metro Board">
-            <h2>Card</h2>
-            <div id="cardBox"></div>
-        </div>
-        <div id="right">
-            <h2>Players</h2>
-            <div id="players"></div>
-            <h2>Log</h2>
-            <div id="log"></div>
-        </div>
-    </div>
+  <div id="game">
+    <strong>Game Area:</strong>
+    <p>The game board and player moves will appear here.</p>
+  </div>
 
-<script>
-const socket = io();
-function joinGame() {{
-    const name = document.getElementById("nameInput").value;
-    socket.emit("join", {{ name: name }});
-}}
-function takeTurn() {{
-    socket.emit("take_turn");
-}}
-function resetGame() {{
-    socket.emit("reset");
-}}
+  <script>
+    const socket = io();
 
-socket.on("update", (game) => {{
-    let logHTML = game.log.map(e => "<p>" + e + "</p>").join("");
-    document.getElementById("log").innerHTML = logHTML;
+    const form = document.getElementById('chat-form');
+    const input = document.getElementById('message');
+    const messages = document.getElementById('messages');
 
-    let playerHTML = game.players.map(p =>
-        `<p><b>${{p.name}}</b><br>📍 ${{p.position}}<br>💰 ${{p.money}}<br>🎴 ${{p.inventory.join(", ")}}</p>`).join("");
-    document.getElementById("players").innerHTML = playerHTML;
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      if (input.value) {
+        socket.emit('chat', input.value);
+        input.value = '';
+      }
+    });
 
-    let card = game.last_card;
-    if (card) {{
-        document.getElementById("cardBox").innerHTML =
-            `<b>${{card.name}}</b><br>Type: ${{card.type}}<br>Effect: ${{JSON.stringify(card.effect)}}`;
-    }} else {{
-        document.getElementById("cardBox").innerHTML = "<i>No card drawn</i>";
-    }}
-}});
-</script>
+    socket.on('chat', function(msg) {
+      const item = document.createElement('div');
+      item.textContent = msg;
+      messages.appendChild(item);
+      messages.scrollTop = messages.scrollHeight;
+    });
+  </script>
 </body>
 </html>
