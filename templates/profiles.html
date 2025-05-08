@@ -1,1 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Player Profiles – Move-Up Metro</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body { font-family: sans-serif; padding: 2rem; background: #f0f4f8; }
+    h1 { color: #333; }
+    .profile { background: #fff; padding: 1rem; margin-bottom: 1rem; border: 1px solid #ddd; border-radius: 5px; }
+    .badge { display: inline-block; background: #e0e0e0; padding: 0.25rem 0.5rem; margin-right: 0.5rem; border-radius: 4px; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <h1>👤 Player Profiles</h1>
 
+  {% for user in users %}
+  <div class="profile">
+    <strong>{{ user.name }}</strong><br />
+    Joined: {{ user.joined }}<br />
+    Level: {{ user.level }}<br />
+    Badges:
+    {% for badge in user.badges %}
+      <span class="badge">{{ badge }}</span>
+    {% endfor %}
+  </div>
+  {% endfor %}
+
+  <p><a href="/">⬅ Back to Game</a></p>
+</body>
+</html>

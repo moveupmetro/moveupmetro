@@ -1,1 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Unlock Rewards – Move-Up Metro</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body { font-family: sans-serif; padding: 2rem; background: #f8f9fa; }
+    h1 { color: #444; }
+    input[type="text"] { width: 300px; padding: 0.5rem; font-size: 1rem; }
+    button { padding: 0.5rem 1rem; font-size: 1rem; }
+    .result { margin-top: 1rem; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h1>🔓 Unlock Rewards</h1>
 
+  <form method="POST">
+    <label for="code">Enter unlock code:</label><br />
+    <input type="text" id="code" name="code" placeholder="e.g., LEVELUP2025" required />
+    <button type="submit">Redeem</button>
+  </form>
+
+  {% if result %}
+  <div class="result">{{ result }}</div>
+  {% endif %}
+
+  <p style="margin-top:2rem;"><a href="/">⬅ Back to Game</a></p>
+</body>
+</html>
