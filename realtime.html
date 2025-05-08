@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="manifest" href="/static/manifest.json">
+<script>
+if ("serviceWorker" in navigator) { navigator.serviceWorker.register("/static/service-worker.js"); }
+</script>
+    <title>Move-Up Metro (Mobile Ready)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+    <script defer data-domain="yourgame.example.com" src="https://plausible.io/js/script.js"></script>
+    <style>
+        body {{
+            font-family: Arial, sans-serif;
+            padding: 1rem;
+            margin: 0;
+        }}
+        input, button {{
+            font-size: 1.2rem;
+            padding: 0.5rem;
+            margin: 0.3rem 0;
+            width: 100%;
+        }}
+        img {{
+            width: 100%;
+            max-width: 100%;
+        }}
+        #cardBox {{
+            background: #eef;
+            border: 1px solid #ccc;
+            padding: 0.5rem;
+            margin-top: 1rem;
+        }}
+        @media (min-width: 768px) {{
+            .flex {{
+                display: flex;
+                gap: 2rem;
+            }}
+            #left, #right {{
+                flex: 1;
+            }}
+        }}
+    </style>
+</head>
+<body>
+    <h1>🚇 Move-Up Metro</h1>
+    <input id="nameInput" placeholder="Your Name">
+    <button onclick="joinGame()">Join Game</button>
+    <button onclick="takeTurn()">Take Turn</button>
+    <button onclick="resetGame()">Reset</button>
+
+    <div class="flex">
+        <div id="left">
+            <h2>Game Board</h2>
+            <img src="/board.svg" alt="Metro Board">
+            <h2>Card</h2>
+            <div id="cardBox"></div>
+        </div>
+        <div id="right">
+            <h2>Players</h2>
+            <div id="players"></div>
+            <h2>Log</h2>
+            <div id="log"></div>
+        </div>
+    </div>
+
+<script>
+const socket = io();
+function joinGame() {{
+    const name = document.getElementById("nameInput").value;
+    socket.emit("join", {{ name: name }});
+}}
+function takeTurn() {{
+    socket.emit("take_turn");
+}}
+function resetGame() {{
+    socket.emit("reset");
+}}
+
+socket.on("update", (game) => {{
+    let logHTML = game.log.map(e => "<p>" + e + "</p>").join("");
+    document.getElementById("log").innerHTML = logHTML;
+
+    let playerHTML = game.players.map(p =>
+        `<p><b>${{p.name}}</b><br>📍 ${{p.position}}<br>💰 ${{p.money}}<br>🎴 ${{p.inventory.join(", ")}}</p>`).join("");
+    document.getElementById("players").innerHTML = playerHTML;
+
+    let card = game.last_card;
+    if (card) {{
+        document.getElementById("cardBox").innerHTML =
+            `<b>${{card.name}}</b><br>Type: ${{card.type}}<br>Effect: ${{JSON.stringify(card.effect)}}`;
+    }} else {{
+        document.getElementById("cardBox").innerHTML = "<i>No card drawn</i>";
+    }}
+}});
+</script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+{
+  "opportunity": [
+    {
+      "name": "Internship",
+      "type": "opportunity",
+      "effect": {
+        "money": 200
+      }
+    },
+    {
+      "name": "Mentorship",
+      "type": "opportunity",
+      "effect": {
+        "badge": "Mentor"
+      }
+    },
+    {
+      "name": "Grant",
+      "type": "opportunity",
+      "effect": {
+        "money": 300
+      }
+    },
+    {
+      "name": "Bonus",
+      "type": "opportunity",
+      "effect": {
+        "money": 400
+      }
+    }
+  ],
+  "side_hustle": [
+    {
+      "name": "Freelance Gig",
+      "type": "side_hustle",
+      "effect": {
+        "money": 100,
+        "extra_turn": true
+      }
+    },
+    {
+      "name": "Craft Sale",
+      "type": "side_hustle",
+      "effect": {
+        "money": 150
+      }
+    },
+    {
+      "name": "Merch Drop",
+      "type": "side_hustle",
+      "effect": {
+        "money": 200
+      }
+    }
+  ],
+  "risk": [
+    {
+      "name": "Burnout",
+      "type": "risk",
+      "effect": {
+        "money": -300,
+        "skip_next_turn": true
+      }
+    },
+    {
+      "name": "Market Crash",
+      "type": "risk",
+      "effect": {
+        "money": -200
+      }
+    },
+    {
+      "name": "Disruption",
+      "type": "risk",
+      "effect": {
+        "lose_random_card": true
+      }
+    }
+  ]
+}

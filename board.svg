@@ -1,0 +1,102 @@
+<svg width="2000" height="1500" xmlns="http://www.w3.org/2000/svg">
+<rect width="2000" height="1500" fill="white"/>
+<circle cx="1000" cy="750" r="6" fill="gray"/>
+<text x="1010" y="750" font-size="10">Metro Entrance</text>
+<circle cx="1080" cy="750" r="6" fill="gray"/>
+<text x="1090" y="750" font-size="10">Paycheck</text>
+<circle cx="1160" cy="750" r="6" fill="gray"/>
+<text x="1170" y="750" font-size="10">Opportunity</text>
+<circle cx="1240" cy="750" r="6" fill="gray"/>
+<text x="1250" y="750" font-size="10">First Job</text>
+<circle cx="1240" cy="670" r="6" fill="gray"/>
+<text x="1250" y="670" font-size="10">Side Hustle</text>
+<circle cx="1320" cy="670" r="6" fill="gray"/>
+<text x="1330" y="670" font-size="10">Twist</text>
+<circle cx="1400" cy="670" r="6" fill="gray"/>
+<text x="1410" y="670" font-size="10">Marketplace</text>
+<circle cx="1480" cy="670" r="6" fill="gray"/>
+<text x="1490" y="670" font-size="10">Economic Shift</text>
+<circle cx="1560" cy="670" r="6" fill="gray"/>
+<text x="1570" y="670" font-size="10">Lifestyle Goal</text>
+<circle cx="1320" cy="590" r="6" fill="gray"/>
+<text x="1330" y="590" font-size="10">Skill Building</text>
+<circle cx="1240" cy="590" r="6" fill="gray"/>
+<text x="1250" y="590" font-size="10">Job Leads</text>
+<circle cx="1400" cy="750" r="6" fill="gray"/>
+<text x="1410" y="750" font-size="10">Risten Launch</text>
+<circle cx="1480" cy="750" r="6" fill="gray"/>
+<text x="1490" y="750" font-size="10">Startup Launched 1</text>
+<circle cx="1560" cy="750" r="6" fill="gray"/>
+<text x="1570" y="750" font-size="10">Startup Launched 2</text>
+<circle cx="1640" cy="670" r="6" fill="gray"/>
+<text x="1650" y="670" font-size="10">GOAL</text>
+<circle cx="1080" cy="670" r="6" fill="gray"/>
+<text x="1090" y="670" font-size="10">Event 1</text>
+<circle cx="1160" cy="670" r="6" fill="gray"/>
+<text x="1170" y="670" font-size="10">Event 2</text>
+<circle cx="1400" cy="590" r="6" fill="gray"/>
+<text x="1410" y="590" font-size="10">Boost 1</text>
+<circle cx="1480" cy="590" r="6" fill="gray"/>
+<text x="1490" y="590" font-size="10">Boost 2</text>
+<circle cx="1320" cy="830" r="6" fill="gray"/>
+<text x="1330" y="830" font-size="10">Promotion</text>
+<circle cx="1240" cy="830" r="6" fill="gray"/>
+<text x="1250" y="830" font-size="10">Freelance Gig</text>
+<circle cx="1160" cy="830" r="6" fill="gray"/>
+<text x="1170" y="830" font-size="10">Debt</text>
+<circle cx="1080" cy="830" r="6" fill="gray"/>
+<text x="1090" y="830" font-size="10">Financial Aid</text>
+<circle cx="1000" cy="830" r="6" fill="gray"/>
+<text x="1010" y="830" font-size="10">Networking Event</text>
+<circle cx="1400" cy="510" r="6" fill="gray"/>
+<text x="1410" y="510" font-size="10">Certification</text>
+<circle cx="1480" cy="510" r="6" fill="gray"/>
+<text x="1490" y="510" font-size="10">Mentorship</text>
+<circle cx="1560" cy="510" r="6" fill="gray"/>
+<text x="1570" y="510" font-size="10">Fail Forward</text>
+<circle cx="1640" cy="510" r="6" fill="gray"/>
+<text x="1650" y="510" font-size="10">Rebrand</text>
+<circle cx="1480" cy="830" r="6" fill="gray"/>
+<text x="1490" y="830" font-size="10">Side Pivot</text>
+<circle cx="1400" cy="830" r="6" fill="gray"/>
+<text x="1410" y="830" font-size="10">Crowdfunding</text>
+<circle cx="1320" cy="910" r="6" fill="gray"/>
+<text x="1330" y="910" font-size="10">Market Crash</text>
+<circle cx="1240" cy="910" r="6" fill="gray"/>
+<text x="1250" y="910" font-size="10">Grant Award</text>
+<circle cx="1160" cy="910" r="6" fill="gray"/>
+<text x="1170" y="910" font-size="10">Internship</text>
+<circle cx="1480" cy="910" r="6" fill="gray"/>
+<text x="1490" y="910" font-size="10">Promotion 2</text>
+<circle cx="1560" cy="910" r="6" fill="gray"/>
+<text x="1570" y="910" font-size="10">Lifestyle Reset</text>
+<circle cx="1640" cy="910" r="6" fill="gray"/>
+<text x="1650" y="910" font-size="10">Startup Reboot</text>
+<circle cx="1720" cy="830" r="6" fill="gray"/>
+<text x="1730" y="830" font-size="10">Pivot Again</text>
+<circle cx="1800" cy="750" r="6" fill="gray"/>
+<text x="1810" y="750" font-size="10">Final Hustle</text>
+<circle cx="1880" cy="750" r="6" fill="gray"/>
+<text x="1890" y="750" font-size="10">End Game</text>
+<circle cx="1960" cy="670" r="6" fill="gray"/>
+<text x="1970" y="670" font-size="10">Legacy Choice</text>
+<circle cx="2040" cy="590" r="6" fill="gray"/>
+<text x="2050" y="590" font-size="10">Mastery Track</text>
+<circle cx="2040" cy="510" r="6" fill="gray"/>
+<text x="2050" y="510" font-size="10">Victory Loop</text>
+<circle cx="2040" cy="430" r="6" fill="gray"/>
+<text x="2050" y="430" font-size="10">Encore Goal</text>
+<circle cx="1960" cy="350" r="6" fill="gray"/>
+<text x="1970" y="350" font-size="10">Double Down</text>
+<circle cx="1880" cy="350" r="6" fill="gray"/>
+<text x="1890" y="350" font-size="10">Burnout</text>
+<circle cx="1800" cy="350" r="6" fill="gray"/>
+<text x="1810" y="350" font-size="10">Recovery</text>
+<circle cx="1720" cy="350" r="6" fill="gray"/>
+<text x="1730" y="350" font-size="10">Renewal</text>
+<circle cx="1640" cy="350" r="6" fill="gray"/>
+<text x="1650" y="350" font-size="10">Final Mentor</text>
+<circle cx="1560" cy="350" r="6" fill="gray"/>
+<text x="1570" y="350" font-size="10">Graduation</text>
+<!-- Dynamic player markers inserted here -->
+</svg>
