@@ -1,0 +1,12 @@
+{
+  "opportunity": [
+    {"name": "Freelance Win", "effect": {"money": 300, "badge": "Hustler"}},
+    {"name": "New Skill", "effect": {"extra_turn": true}},
+    {"name": "Investor Interest", "effect": {"money": 500}}
+  ],
+  "risk": [
+    {"name": "Job Loss", "effect": {"money": -200}},
+    {"name": "Burnout", "effect": {"skip_next_turn": true}},
+    {"name": "Bad Investment", "effect": {"lose_random_card": true}}
+  ]
+}
