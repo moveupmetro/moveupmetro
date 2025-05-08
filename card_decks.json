@@ -1,77 +1,40 @@
 {
   "opportunity": [
     {
-      "name": "Internship",
-      "type": "opportunity",
+      "name": "Freelance Win",
       "effect": {
-        "money": 200
+        "money": 300,
+        "badge": "Hustler"
       }
     },
     {
-      "name": "Mentorship",
-      "type": "opportunity",
+      "name": "New Skill",
       "effect": {
-        "badge": "Mentor"
-      }
-    },
-    {
-      "name": "Grant",
-      "type": "opportunity",
-      "effect": {
-        "money": 300
-      }
-    },
-    {
-      "name": "Bonus",
-      "type": "opportunity",
-      "effect": {
-        "money": 400
-      }
-    }
-  ],
-  "side_hustle": [
-    {
-      "name": "Freelance Gig",
-      "type": "side_hustle",
-      "effect": {
-        "money": 100,
         "extra_turn": true
       }
     },
     {
-      "name": "Craft Sale",
-      "type": "side_hustle",
+      "name": "Investor Interest",
       "effect": {
-        "money": 150
-      }
-    },
-    {
-      "name": "Merch Drop",
-      "type": "side_hustle",
-      "effect": {
-        "money": 200
+        "money": 500
       }
     }
   ],
   "risk": [
     {
-      "name": "Burnout",
-      "type": "risk",
-      "effect": {
-        "money": -300,
-        "skip_next_turn": true
-      }
-    },
-    {
-      "name": "Market Crash",
-      "type": "risk",
+      "name": "Job Loss",
       "effect": {
         "money": -200
       }
     },
     {
-      "name": "Disruption",
-      "type": "risk",
+      "name": "Burnout",
+      "effect": {
+        "skip_next_turn": true
+      }
+    },
+    {
+      "name": "Bad Investment",
       "effect": {
         "lose_random_card": true
       }
