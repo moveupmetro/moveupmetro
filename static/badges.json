@@ -1,0 +1,24 @@
+{
+  "badges": [
+    {
+      "name": "Wealthy",
+      "criteria": "Reach $1000"
+    },
+    {
+      "name": "Hustler",
+      "criteria": "Win 3 side hustles"
+    },
+    {
+      "name": "Fast Track",
+      "criteria": "Reach goal in < 6 turns"
+    },
+    {
+      "name": "Risk Taker",
+      "criteria": "Survive 3 risk cards"
+    },
+    {
+      "name": "Collector",
+      "criteria": "Collect 5 unique cards"
+    }
+  ]
+}
